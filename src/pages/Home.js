@@ -1,10 +1,14 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchHome } from '../redux/slices/home';
-import axios from 'axios';
-import { useTranslation } from 'react-i18next';
-import Language from '../components/Language';
 import { useLanguage } from '../context/LanguageContext';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import Slider from '../components/home/Slider';
+import Ad from '../components/home/Ad';
+import Search from '../components/home/Search';
+import Wave from '../components/Wave';
+import AboutComp from '../components/home/AboutComp';
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -20,13 +24,14 @@ export default function Home() {
   
   console.log(home.item)
   return (
-    <div>
-      {home.item.title}<br/>
-      <br/>
-      {home.item.aboutclub}<br/>
-      <button onClick={() => changeLanguage('en')}>en</button>
-      <button onClick={() => changeLanguage('ka')}>ka</button>
-      <button onClick={() => changeLanguage('ru')}>ru</button>
-    </div>
+    <main className="flex flex-col items-center ">
+      <Header/>
+      <Slider/>
+      <Ad/>
+      <Search/>
+      <Wave/>
+      <AboutComp/>
+      <Footer/>
+  </main>
   )
 }
