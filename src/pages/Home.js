@@ -9,6 +9,7 @@ import Ad from '../components/home/Ad';
 import Search from '../components/home/Search';
 import Wave from '../components/Wave';
 import AboutComp from '../components/home/AboutComp';
+import Language from '../components/Language';
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -26,6 +27,7 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center ">
       <Header/>
+      <Language/>
       <Slider/>
       <Ad/>
       <Search/>
