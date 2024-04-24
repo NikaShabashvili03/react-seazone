@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.swiper-slide-prev, .swiper-slide-next {
+    filter: blur(0.2rem);
+    box-shadow: none !important;
+}
+
+.swiper-3d .swiper-slide-shadow-left, .swiper-slide-shadow-right {
+    background-image: none !important;
+}
+
+@media (max-width: 1280px) {
+    .swiper-slide-prev, .swiper-slide-next {
+        filter: none;
+        box-shadow: none !important;
+    }
+}

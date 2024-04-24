@@ -23,11 +23,9 @@ export default function Home() {
 
   if(loading) return <div>LOADING SKELETON</div>
   
-  console.log(home.item)
   return (
-    <main className="flex flex-col items-center ">
+    <main className="flex gap-5 flex-col items-center ">
       <Header/>
-      <Language/>
       <Slider/>
       <Ad/>
       <Search/>
